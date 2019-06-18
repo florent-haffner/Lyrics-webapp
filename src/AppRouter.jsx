@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import App from './modules/App';
-import Home from './app/Home';
+import App from './ReactRootModules/App';
+import Home from './components/Home';
 
-export default class AppRouter extends Component {
+export class AppRouter extends Component {
+    state = {
+        pseudo: 'static'
+    }
     render() {
         return (
             <Router>
@@ -14,3 +17,4 @@ export default class AppRouter extends Component {
         )
     }
 }
+export default AppRouter;
