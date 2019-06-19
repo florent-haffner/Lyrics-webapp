@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NavigationBar from './NavigationBar';
 import { Container } from 'react-bootstrap';
 import Todos from './Todos';
+import AddTodo from './AddTodo';
 
 export class Home extends Component {
     state = {
@@ -10,8 +11,8 @@ export class Home extends Component {
                 {
                     "id": 1,
                     "title": "Learn React",
-                    "description": "Do this for glory",
-                    "completed": true
+                    "description": "For glory",
+                    "completed": false 
                 },
                 {
                     "id": 2,
@@ -22,7 +23,7 @@ export class Home extends Component {
                 {
                     "id": 3,
                     "title": "Make money and fun",
-                    "description": "Because it's like that",
+                    "description": "It's like that",
                     "completed": false
                 },
             ]
@@ -37,15 +38,26 @@ export class Home extends Component {
             return todo;
         }) })
     }
+    // Delete Todo
+    delTodo = (id) => {
+        this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)] });
+    }
+
+    addTodo = (title) => {
+        console.log(title)
+    }
 
     render() {
         return (
             <div>
                 <NavigationBar pseudo={this.state.pseudo} />
                 <Container className="mt-4">
+                    <AddTodo addTodo={this.addTodo} />
                     <Todos 
-                    todos={this.state.todos} 
-                    markComplete={this.markComplete} />
+                        todos={this.state.todos} 
+                        markComplete={this.markComplete} 
+                        delTodo={this.delTodo} 
+                    />
                 </Container>
             </div>
         )
