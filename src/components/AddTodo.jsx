@@ -5,7 +5,7 @@ export class AddTodo extends Component {
         title: ''
     }
 
-    onChange = (e) => this.setState({ title: e.target.value });
+    onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
     onSubmit = (e) => {
         e.preventDefault();
@@ -15,7 +15,7 @@ export class AddTodo extends Component {
 
     render() {
         return (
-            <form>
+            <form onSubmit={ this.onSubmit }>
                 <input 
                     type="text" 
                     className="form-control mt-2 mb-3" 
@@ -24,12 +24,11 @@ export class AddTodo extends Component {
                     value={this.state.title}
                     onChange={this.onChange}
                 />
-                <input 
+                {/* <input 
                     className="btn btn-primary mb-3" 
                     type="submit" 
                     value="Submit" 
-                    onSubmit={this.onSubmit}
-                />
+                /> */}
             </form>
         )
     }

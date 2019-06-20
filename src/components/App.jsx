@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap';
 import Todos from './Todos';
 import AddTodo from './AddTodo';
 
-export class Home extends Component {
+export class App extends Component {
     state = {
         pseudo: 'static-state',
         todos: [
@@ -44,7 +44,13 @@ export class Home extends Component {
     }
 
     addTodo = (title) => {
-        console.log(title)
+        const newTodo = {
+            id: 4,
+            title: title,
+            description: 'Yes',
+            complete: false
+        }
+        this.setState({ todos: [...this.state.todos, newTodo] })
     }
 
     render() {
@@ -63,4 +69,4 @@ export class Home extends Component {
         )
     }
 }
-export default Home
+export default App

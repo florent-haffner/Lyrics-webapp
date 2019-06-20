@@ -6,7 +6,7 @@ export class NavigationBar extends Component {
         return (
             <Navbar bg="dark" variant="dark">
                 <Container>
-                <Navbar.Brand href="/home">Beautiful webapp</Navbar.Brand>
+                <Navbar.Brand href="/home">Simple webapp</Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>

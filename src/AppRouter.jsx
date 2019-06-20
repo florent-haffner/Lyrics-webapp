@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import App from './ReactRootModules/App';
-import Home from './components/Home';
+import Root from './ReactRootModules/Root';
+import App from './components/App';
 
 export class AppRouter extends Component {
     state = {
@@ -11,8 +11,8 @@ export class AppRouter extends Component {
     render() {
         return (
             <Router>
-                <Route path="/" exact component={App} />
-                <Route path="/home" component={Home} />
+                <Route path="/" exact component={Root} />
+                <Route path="/app" component={App} />
             </Router>
         )
     }

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-export default class App extends Component {
+export default class Root extends Component {
   render() {
     return (
       <div className="App">
@@ -10,10 +10,10 @@ export default class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <a
             className="App-link"
-            href="/home"
+            href="/app"
             rel="noopener noreferrer"
           >
-            See Home
+            Go to App
           </a>
         </header>
       </div>
