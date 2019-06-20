@@ -9,7 +9,7 @@ export class TodoItem extends Component {
     }
 
     render() {
-        const { id, title, description } = this.props.todo;
+        const { id, title } = this.props.todo;
         return (
             <div className="row" role="alert" style={ this.getStyle() } >
                 <div className="col-md-auto">
@@ -19,9 +19,9 @@ export class TodoItem extends Component {
                 <div className="col-md">
                     { title }
                 </div>
-                <div className="col-md">
+                {/* <div className="col-md">
                     { description }
-                </div>
+                </div> */}
                 <div className="col-md">
                     <button onClick={this.props.delTodo.bind(this, id)} 
                         type="button" className="close" aria-label="Close">
@@ -33,9 +33,10 @@ export class TodoItem extends Component {
     }
 }
 
-// PropTypes : why???
 TodoItem.propTypes = {
-    todo: PropTypes.object.isRequired
+    todo: PropTypes.object.isRequired,
+    markComplete: PropTypes.func.isRequired,
+    delTodo: PropTypes.func.isRequired
 }
 
 export default TodoItem

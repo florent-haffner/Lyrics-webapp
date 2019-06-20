@@ -1,33 +1,19 @@
 import React, { Component } from 'react';
 import NavigationBar from './NavigationBar';
-import { Container } from 'react-bootstrap';
 import Todos from './Todos';
 import AddTodo from './AddTodo';
+import axios from 'axios';
 
-export class App extends Component {
+export default class App extends Component {
     state = {
         pseudo: 'static-state',
-        todos: [
-                {
-                    "id": 1,
-                    "title": "Learn React",
-                    "description": "For glory",
-                    "completed": false 
-                },
-                {
-                    "id": 2,
-                    "title": "Build stuff",
-                    "description": "Or just because.",
-                    "completed": false
-                },
-                {
-                    "id": 3,
-                    "title": "Make money and fun",
-                    "description": "It's like that",
-                    "completed": false
-                },
-            ]
-        }
+        todos: []
+    }
+
+    componentDidMount() {
+        axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10')
+        .then(res => this.setState({ todos: res.data }))
+    }
 
     // Toggle complete
     markComplete = (id) => {
@@ -40,33 +26,34 @@ export class App extends Component {
     }
     // Delete Todo
     delTodo = (id) => {
-        this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)] });
+        axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
+        .then(res => this.setState({ todos: 
+            [...this.state.todos.filter(todo => todo.id !== id)] }));
     }
 
     addTodo = (title) => {
-        const newTodo = {
-            id: 4,
+        axios.post('https://jsonplaceholder.typicode.com/todos', {
             title: title,
-            description: 'Yes',
-            complete: false
-        }
-        this.setState({ todos: [...this.state.todos, newTodo] })
+            completed: false
+        })
+        .then(res => this.setState({ todos: 
+            [...this.state.todos, res.data] })
+        );
     }
 
     render() {
         return (
             <div>
                 <NavigationBar pseudo={this.state.pseudo} />
-                <Container className="mt-4">
+                <div className="container mt-4">
                     <AddTodo addTodo={this.addTodo} />
                     <Todos 
                         todos={this.state.todos} 
                         markComplete={this.markComplete} 
                         delTodo={this.delTodo} 
                     />
-                </Container>
+                </div>
             </div>
         )
     }
 }
-export default App
