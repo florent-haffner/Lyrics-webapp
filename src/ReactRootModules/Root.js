@@ -13,7 +13,7 @@ export default class Root extends Component {
           href="/search"
           rel="noopener noreferrer"
         >
-          Link to /search
+          WIP : Link to /search
         </a>
           <a
             className="App-link"
@@ -21,6 +21,13 @@ export default class Root extends Component {
             rel="noopener noreferrer"
           >
             Link to /notes
+          </a>
+          <a
+            className="App-link"
+            href="#about"
+            rel="noopener noreferrer"
+          >
+            TODO : Link to /about
           </a>
         </header>
       </div>

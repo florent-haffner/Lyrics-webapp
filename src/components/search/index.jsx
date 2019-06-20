@@ -8,7 +8,9 @@ export class Search extends Component {
     render() {
         return (
             <React.Fragment>
-                <Tracks />
+                <div className="container">
+                    <Tracks />
+                </div>
             </React.Fragment>
         )
     }
