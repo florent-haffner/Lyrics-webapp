@@ -13,14 +13,14 @@ export default class Root extends Component {
           href="/search"
           rel="noopener noreferrer"
         >
-          Go to auto-complete search
+          Link to /search
         </a>
           <a
             className="App-link"
             href="/notes"
             rel="noopener noreferrer"
           >
-            Go to Notes
+            Link to /notes
           </a>
         </header>
       </div>

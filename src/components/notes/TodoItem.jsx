@@ -19,9 +19,6 @@ export class TodoItem extends Component {
                 <div className="col-md">
                     { title }
                 </div>
-                {/* <div className="col-md">
-                    { description }
-                </div> */}
                 <div className="col-md">
                     <button onClick={this.props.delTodo.bind(this, id)} 
                         type="button" className="close" aria-label="Close">

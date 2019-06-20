@@ -43,6 +43,7 @@ export default class Notes extends Component {
         return (
             <div>
                 <div className="container mt-4">
+                    <span>Based on JsonPlaceHolder API</span>
                     <AddTodo addTodo={this.addTodo} />
                     <Todos 
                         todos={this.state.todos} 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { NavigationBar } from '../ReactRootModules/NavigationBar';
+import { NavigationBar } from './NavigationBar';
 
 export class Layout extends Component {
     state = {
