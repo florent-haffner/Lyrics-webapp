@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import NavigationBar from './NavigationBar';
 import Todos from './Todos';
 import AddTodo from './AddTodo';
 import axios from 'axios';
 
-export default class App extends Component {
+export default class Notes extends Component {
     state = {
-        pseudo: 'static-state',
         todos: []
     }
 
@@ -44,7 +42,6 @@ export default class App extends Component {
     render() {
         return (
             <div>
-                <NavigationBar pseudo={this.state.pseudo} />
                 <div className="container mt-4">
                     <AddTodo addTodo={this.addTodo} />
                     <Todos 

@@ -9,11 +9,18 @@ export default class Root extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <a
+          className="App-link"
+          href="/search"
+          rel="noopener noreferrer"
+        >
+          Go to auto-complete search
+        </a>
+          <a
             className="App-link"
-            href="/app"
+            href="/notes"
             rel="noopener noreferrer"
           >
-            Go to App
+            Go to Notes
           </a>
         </header>
       </div>
