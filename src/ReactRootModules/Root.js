@@ -22,13 +22,6 @@ export default class Root extends Component {
           >
             Link to /notes
           </a>
-          <a
-            className="App-link"
-            href="#about"
-            rel="noopener noreferrer"
-          >
-            TODO : Link to /about
-          </a>
         </header>
       </div>
     )

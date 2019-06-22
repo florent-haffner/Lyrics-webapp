@@ -1,19 +1,17 @@
-import React, { Component } from 'react'
-import './search.css';
+import React, { Component } from "react";
 
-import Tracks from './tracks/Tracks'
+import Tracks from "./tracks/Tracks";
 
 export class Search extends Component {
-
-    render() {
-        return (
-            <React.Fragment>
-                <div className="container">
-                    <Tracks />
-                </div>
-            </React.Fragment>
-        )
-    }
+  render() {
+    return (
+      <React.Fragment>
+        <div className="container">
+          <Tracks />
+        </div>
+      </React.Fragment>
+    );
+  }
 }
 
-export default Search
+export default Search;
