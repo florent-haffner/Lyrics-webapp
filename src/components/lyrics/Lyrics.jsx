@@ -54,34 +54,34 @@ export default class Lyrics extends Component {
             <div className="card">
               <h5 className="card-header">
                 {track.track_name} by{" "}
-                <span-text-secondary>{track.artist_name}</span-text-secondary>
+                <span className="text-secondary">{track.artist_name}</span>
               </h5>
               <div className="card-body">
                 <p className="card-text">{lyrics.lyrics_body}</p>
               </div>
             </div>
-          </div>
 
-          <ul className="list-group mt-3">
-            <li className="list-group-item">
-              <strong>Album ID</strong>: {track.album_id}
-            </li>
-            <li className="list-group-item">
-              <strong>Song Genre</strong>:{" "}
-              {
-                track.primary_genres.music_genre_list[0].music_genre
-                  .music_genre_name
-              }
-            </li>
-            <li className="list-group-item">
-              <strong>Explicit Words</strong>:{" "}
-              {track.explicit === 0 ? "No" : "Yes"}
-            </li>
-            <li className="list-group-item">
-              <strong>Last update</strong>:{" "}
-              <Moment format="MM/DD/YYYY">{track.updated_time}</Moment>
-            </li>
-          </ul>
+            <ul className="list-group mt-3">
+              <li className="list-group-item">
+                <strong>Album ID</strong>: {track.album_id}
+              </li>
+              <li className="list-group-item">
+                <strong>Song Genre</strong>:{" "}
+                {
+                  track.primary_genres.music_genre_list[0].music_genre
+                    .music_genre_name
+                }
+              </li>
+              <li className="list-group-item">
+                <strong>Explicit Words</strong>:{" "}
+                {track.explicit === 0 ? "No" : "Yes"}
+              </li>
+              <li className="list-group-item">
+                <strong>Last update</strong>:{" "}
+                <Moment format="MM/DD/YYYY">{track.updated_time}</Moment>
+              </li>
+            </ul>
+          </div>
         </React.Fragment>
       );
     }

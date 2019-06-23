@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import logo from './logo.svg';
-import './Root.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./Root.css";
 
 export default class Root extends Component {
   render() {
@@ -8,22 +8,14 @@ export default class Root extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <a
-          className="App-link"
-          href="/lyrics"
-          rel="noopener noreferrer"
-        >
-          WIP : Link to /lyrics
-        </a>
-          <a
-            className="App-link"
-            href="/notes"
-            rel="noopener noreferrer"
-          >
+          <a className="App-link" href="/lyrics" rel="noopener noreferrer">
+            Link to /lyrics
+          </a>
+          <a className="App-link" href="/notes" rel="noopener noreferrer">
             Link to /notes
           </a>
         </header>
       </div>
-    )
+    );
   }
 }
