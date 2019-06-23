@@ -4,8 +4,9 @@ import { Provider } from "./context";
 
 import Root from "./ReactRootModules/Root";
 import Notes from "./components/notes";
-import Search from "./components/search";
+import LyricsFinder from "./components/lyrics";
 import Layout from "./components/layout/Layout";
+import Lyrics from "./components/lyrics/Lyrics";
 
 export class AppRouter extends Component {
   render() {
@@ -13,10 +14,11 @@ export class AppRouter extends Component {
       <Provider>
         <Router>
           <React.Fragment>
-            <Route path="/" exact component={Root} />
+            <Route exact path="/" component={Root} />
             <Layout />
-            <Route path="/search" component={Search} />
-            <Route path="/notes" component={Notes} />
+            <Route exact path="/lyrics" component={LyricsFinder} />
+            <Route exact path="/lyrics/track/:id" component={Lyrics} />
+            <Route exact path="/notes" component={Notes} />
           </React.Fragment>
         </Router>
       </Provider>

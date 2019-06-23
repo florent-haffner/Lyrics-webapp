@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import Tracks from "./tracks/Tracks";
 
-export class Search extends Component {
+export class LyricsFinder extends Component {
   render() {
     return (
       <React.Fragment>
@@ -14,4 +14,4 @@ export class Search extends Component {
   }
 }
 
-export default Search;
+export default LyricsFinder;

@@ -10,7 +10,7 @@ export class NavigationBar extends Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="/search">Search</Nav.Link>
+              <Nav.Link href="/lyrics">LyricsFinder</Nav.Link>
               <Nav.Link href="/notes">Notes</Nav.Link>
             </Nav>
             <Navbar.Text>

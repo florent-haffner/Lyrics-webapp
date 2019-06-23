@@ -10,10 +10,10 @@ export default class Root extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <a
           className="App-link"
-          href="/search"
+          href="/lyrics"
           rel="noopener noreferrer"
         >
-          WIP : Link to /search
+          WIP : Link to /lyrics
         </a>
           <a
             className="App-link"
