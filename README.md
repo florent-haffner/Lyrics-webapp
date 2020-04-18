@@ -5,10 +5,15 @@ This project is a simple webapp to learn some basics on front-end development :
 - React state management 
 - API query
 
-You can clone this app then : `npm install && npm start`
+Setup
+--
+Node version : v11.15.0
 
-Or access to this sample (you may wait few second before it resume from sleep) : 
+Then : `npm install && npm start`
 
-`https://nelthfr-lyrics.herokuapp.com/`
+Deployement (DEPRECATED)
+--
 
-Node version used : v11.15.0
+Access this sample (it may wait took 30s to resume from sleep) with :
+
+~~`https://nelthfr-lyrics.herokuapp.com/`~~
